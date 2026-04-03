@@ -14,6 +14,10 @@ qbatterywidget::qbatterywidget(QWidget *parent)
 
 
 void qbatterywidget::paintEvent(QPaintEvent *) {
+    if(!this->isVisible()){
+        return;
+    }
+
     QPainter painter(this);
     painter.setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing);
 
