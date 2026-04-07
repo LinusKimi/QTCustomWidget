@@ -68,7 +68,8 @@ void qbatterywidget::paintEvent(QPaintEvent *) {
     // // 绘制电池电量
     painter.setPen(QPen(Qt::black));
     QFont font = painter.font();
-    font.setPixelSize(w_height * 0.5);
+    font.setFamily("微软雅黑");
+    font.setPixelSize(qMin(w_width, w_height) * 0.5);
     font.setBold(true);
     painter.setFont(font);
     painter.drawText(b_rect,Qt::AlignCenter,QString::number(currentValue));
