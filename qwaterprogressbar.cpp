@@ -153,6 +153,9 @@ void qwaterprogressbar::drawWaterWave(QPainter* painter)
     water1.lineTo( width,  height);
     water2.lineTo( width,  height);
 
+    water1.closeSubpath();
+    water2.closeSubpath();
+
     QPainterPath path;
     QColor waterColor1 = m_waterColor;
     waterColor1.setAlpha(100);
