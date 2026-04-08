@@ -140,7 +140,7 @@ void qwaterprogressbar::drawWaterWave(QPainter* painter)
         else
         {
             //第一条波浪Y轴
-            waterY1 = (double)(waveHeight * qSin(cycle * i - M_PI / 2 + m_dOffset)) + waterHeight;//当正弦曲线前进π/2，sin的波峰和cos的波谷就对上了
+            waterY1 = (double)(waveHeight * qSin(cycle * i + m_dOffset - M_PI / 2)) + waterHeight;//当正弦曲线前进π/2，sin的波峰和cos的波谷就对上了
             //第二条波浪Y轴
             waterY2 = (double)(waveHeight * qCos(cycle * i + m_dOffset)) + waterHeight;
         }

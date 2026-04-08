@@ -76,7 +76,7 @@ void qbatterywidget::paintEvent(QPaintEvent *) {
 }
 
 void    qbatterywidget::setCurrentValue(int data){
-    currentValue = data;
+    currentValue = data > 100 ? 100 : data;
     update();
 }
 int     qbatterywidget::getCurrentValue(){
